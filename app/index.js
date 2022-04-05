@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+require('./providers/ServiceProvider')(app)
+
 require('./middlewares')(app)
 require('./routes')(app)
 
