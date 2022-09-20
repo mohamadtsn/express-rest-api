@@ -1,8 +1,11 @@
 {
     "watch": [
         "app",
-        "server.js"
+        "app.ts"
     ],
-    "ext": "js",
-    "exec": "node server.js"
+    "execMap": {
+        "ts": "ts-node"
+    },
+    "ext": "js,ts,json",
+    "exec": "ts-node app.ts"
 }

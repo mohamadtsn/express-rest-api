@@ -1,0 +1,24 @@
+{
+  "include": [
+    "./app/**/*",
+    "app.ts"
+  ],
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016",
+    "sourceMap": true,
+
+    /* Modules */
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./dist",
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "skipLibCheck": true,
+  }
+}

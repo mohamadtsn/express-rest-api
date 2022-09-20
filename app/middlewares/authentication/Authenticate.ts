@@ -1,13 +1,15 @@
-const jwtService = require('../../services/token/jwt')
+import {RequestHandler} from "express-serve-static-core"
+import * as jwtService from '../../services/token/jwt'
 
-module.exports = (req, res, next) => {
-	if (!('authorization' in req.headers)) {
+export default ((req, res, next) => {
+	if (!req.headers['authorization']) {
 		return res.status(401).send({
 			statusCode: 401,
 			success: false,
 			message: 'You are not authorized!'
 		})
 	}
+
 	const [, tokenValue] = req.headers.authorization.split(' ')
 	const tokenPayload = jwtService.verify(tokenValue)
 	if (!tokenPayload) {
@@ -19,4 +21,4 @@ module.exports = (req, res, next) => {
 	}
 
 	next()
-}
+}) as RequestHandler
