@@ -6,7 +6,7 @@
 
 ## 🛠️ Used from:
 <div align="left">
-    <img src="https://borzoyi.ir/static/github/images/repo-express-rest-api-used.png" alt="used-from"/>
+    <img src="https://borzoyi.ir/static/github/images/repo-express-rest-api--used-from.png" alt="used-from"/>
 </div>
 
 <hr>
